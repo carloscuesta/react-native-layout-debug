@@ -38,4 +38,4 @@ class Debugger {
 	}
 }
 
-module.exports = Debugger;
+export default Debugger;

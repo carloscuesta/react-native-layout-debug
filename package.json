@@ -11,8 +11,7 @@
   "xo": {
     "esnext": true,
     "rules": {
-      "array-callback-return": 1,
-      "default-case": 1
+        "unicorn/filename-case": ["error", {"case": "camelCase"}]
     },
     "ignores": [
       "test/**"
