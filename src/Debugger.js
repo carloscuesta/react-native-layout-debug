@@ -1,7 +1,9 @@
 'use strict';
 
+import defaultColors from './defaultColors';
+
 class Debugger {
-	constructor({mode = 'border', borderWidth = 3, colors = {black: '#252525', red: '#FF5252', green: '#00E676', lime: '#C6FF00', yellow: '#FFEA00', orange: '#FF5722', blue: '#448AFF', pink: '#FF4081', purple: '#E040FB', cyan: '#18FFFF', white: '#FFFFFF'}}) {
+	constructor({mode = 'border', borderWidth = 3, colors = defaultColors}) {
 		this._mode = mode;
 		this._borderWidth = borderWidth;
 		this._colors = colors;
