@@ -1,5 +1,7 @@
 import Debugger from './src/debugger';
 
+const defaultDebugger = new Debugger({});
+
 /**
  * Debugger decorator
  * @param  {Object} target
@@ -12,7 +14,7 @@ function debuggerDecorator(target, name, descriptor) {
 	const oldFunction = descriptor.value;
 
 	descriptor.value = function () {
-		return oldFunction.bind(this)(layoutDebug);
+		return oldFunction.bind(this)(layoutDebug.debug.bind(layoutDebug));
 	};
 
 	return descriptor;
@@ -24,9 +26,8 @@ function debuggerDecorator(target, name, descriptor) {
  */
 function getDebugger() {
 	const isCustom = arguments.length === 1;
-	const debuggerParams = isCustom ? arguments[0] : {};
-	const layoutDebug = new Debugger(debuggerParams);
-	return (isCustom) ? debuggerDecorator.bind(layoutDebug) : debuggerDecorator.call(layoutDebug, ...arguments);
+	const layoutDebug = isCustom ? new Debugger(arguments[0]) : defaultDebugger;
+	return isCustom ? debuggerDecorator.bind(layoutDebug) : debuggerDecorator.call(layoutDebug, ...arguments);
 }
 
 export default getDebugger;
