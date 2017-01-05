@@ -1,12 +1,16 @@
 'use strict';
 
 import Debugger from '../src/debugger';
-import should from 'should';
 import defaultColors from '../src/defaultColors';
+import should from 'should';
 
 const debug = new Debugger({
-	mode: 'border',
+	style: 'border',
 	borderWidth: 4
+});
+
+const debugBackground = new Debugger({
+	style: 'background'
 });
 
 describe('react-native-layout-debug', () => {

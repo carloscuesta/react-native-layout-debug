@@ -1,10 +1,12 @@
 'use strict';
 
 import defaultColors from './defaultColors';
+import defaultOptions from './defaultOptions';
 
 class Debugger {
-	constructor({mode = 'border', borderWidth = 3, colors = defaultColors}) {
-		this._mode = mode;
+
+	constructor({style = defaultOptions.styles.border, borderWidth = defaultOptions.borderWidth, colors = defaultColors}) {
+		this._style = style;
 		this._borderWidth = borderWidth;
 		this._colors = colors;
 	}
@@ -34,7 +36,7 @@ class Debugger {
 
 	debug(colorName) {
 		const color = this._getColor(colorName);
-		return (this._mode === 'background') ? this._debugWithBackgrounds(color) : this._debugWithBorders(color);
+		return (this._style === defaultOptions.styles.background) ? this._debugWithBackgrounds(color) : this._debugWithBorders(color);
 	}
 }
 
