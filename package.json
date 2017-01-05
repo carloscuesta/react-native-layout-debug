@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "xo",
     "mocha": "mocha --compilers js:babel-core/register ./test/*.js",
-    "test": "npm run xo && npm run mocha"
+    "test": "npm run lint && npm run mocha"
   },
   "xo": {
     "esnext": true,
