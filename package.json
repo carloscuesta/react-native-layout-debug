@@ -6,6 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "xo": {
+    "esnext": true,
+    "rules": {
+      "array-callback-return": 1,
+      "default-case": 1
+    },
+    "ignores": [
+      "test/**"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carloscuesta/react-native-layout-debug.git"
@@ -28,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/carloscuesta/react-native-layout-debug/issues"
   },
-  "homepage": "https://github.com/carloscuesta/react-native-layout-debug#readme"
+  "homepage": "https://github.com/carloscuesta/react-native-layout-debug#readme",
+  "devDependencies": {
+    "xo": "^0.17.1"
+  }
 }
