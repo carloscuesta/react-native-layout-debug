@@ -25,6 +25,9 @@
   "babel": {
     "presets": [
       "es2015"
+    ],
+    "plugins": [
+      "transform-decorators-legacy"
     ]
   },
   "repository": {
@@ -52,6 +55,7 @@
   "homepage": "https://github.com/carloscuesta/react-native-layout-debug#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.18.0",
     "mocha": "^3.2.0",
     "should": "^11.1.2",
