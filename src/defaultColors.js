@@ -1,3 +1,7 @@
+/**
+ * [defaultColors Object that contains the default colors used by the debug method.]
+ * @type {Object}
+ */
 const defaultColors = {
 	black: '#252525',
 	red: '#FF5252',

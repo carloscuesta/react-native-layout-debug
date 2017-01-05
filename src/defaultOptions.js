@@ -1,3 +1,7 @@
+/**
+ * [defaults Object that contains some of the default values for the Debugger class.]
+ * @type {Object}
+ */
 const defaults = {
 	styles: {
 		border: 'border',
