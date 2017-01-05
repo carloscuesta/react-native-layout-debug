@@ -11,6 +11,8 @@ const defaultDebugger = new Debugger({});
  */
 function debuggerDecorator(target, name, descriptor) {
 	const layoutDebug = this;
+	if(!descriptor) return layoutDebug.debug.bind(layoutDebug);
+
 	const oldFunction = descriptor.value;
 
 	descriptor.value = function () {
