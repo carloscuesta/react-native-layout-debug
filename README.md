@@ -7,7 +7,7 @@
 
 <p align="center">
 	<a href="#">
-		<img src="https://cloud.githubusercontent.com/assets/7629661/21727352/59de2d74-d441-11e6-9440-211592aaa561.png" width="409" alt="react-native-layout-debug">
+		<img src="https://cloud.githubusercontent.com/assets/7629661/21736062/4fabaa2a-d46e-11e6-89ce-107bbdc9688a.png" width="409" alt="react-native-layout-debug">
 	</a>
 </p>
 
