@@ -1,11 +1,11 @@
 {
   "name": "react-native-layout-debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React native layout debugger.",
   "main": "index.js",
   "scripts": {
     "lint": "xo",
-    "mocha": "mocha --compilers js:babel-core/register ./test/*.js",
+    "mocha": "cross-env BABEL_ENV=test mocha --compilers js:babel-core/register ./test/*.js",
     "test": "npm run lint && npm run mocha"
   },
   "xo": {
@@ -23,9 +23,13 @@
     ]
   },
   "babel": {
-    "presets": [
-      "es2015"
-    ],
+    "env": {
+      "test": {
+        "presets": [
+          "es2015"
+        ]
+      }
+    },
     "plugins": [
       "transform-decorators-legacy"
     ]
@@ -53,10 +57,13 @@
     "url": "https://github.com/carloscuesta/react-native-layout-debug/issues"
   },
   "homepage": "https://github.com/carloscuesta/react-native-layout-debug#readme",
+  "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4"
+  },
   "devDependencies": {
     "babel-core": "^6.21.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.18.0",
+    "cross-env": "^3.1.4",
     "mocha": "^3.2.0",
     "should": "^11.1.2",
     "xo": "^0.17.1"
