@@ -67,3 +67,5 @@ An **object of colors** that will be used by the debug. Look at [`defaultColors.
 The **borderWidth** unit to use as border, by default is set to `3`.
 
 ## Demo
+
+<img src="https://cloud.githubusercontent.com/assets/7629661/21731964/63dc8846-d457-11e6-8115-ac5464cabb90.gif" width="374" alt="react-native-layout-debug demo">
