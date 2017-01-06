@@ -14,8 +14,7 @@
 ## Install
 
 ```bash
-$ npm i --save react-native-layout-debug
-$ npm i --save-dev babel-plugin-transform-decorators-legacy
+$ npm i --save react-native-layout-debug babel-plugin-transform-decorators-legacy
 ```
 
 ## Usage
@@ -37,7 +36,7 @@ class HelloWorld extends Component {
 	// Using a custom config {style: 'background', colors: colorListObject}
 	// @reactNativeDebug({style: 'background', colors: colorListObject})
 	// Using the default config {style: 'border', borderWidth: 3, colors: defaultColors}.
-	@reactNativeDebug
+	@reactNativeLayoutDebug
 	render(debug) {
 		return (
 			<View style={[debug('red')]}>
@@ -66,3 +65,5 @@ An **object of colors** that will be used by the debug. Look at [`defaultColors.
 #### `borderWidth`
 
 The **borderWidth** unit to use as border, by default is set to `3`.
+
+## Demo
