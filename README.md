@@ -7,11 +7,9 @@
 
 <p align="center">
 	<a href="#">
-		<img src="https://cloud.githubusercontent.com/assets/7629661/21726803/7f7004b6-d43e-11e6-9e7d-e735f8825006.png" width="409" alt="react-native-layout-debug" style="margin-top: 15px">
+		<img src="https://cloud.githubusercontent.com/assets/7629661/21727352/59de2d74-d441-11e6-9440-211592aaa561.png" width="409" alt="react-native-layout-debug">
 	</a>
 </p>
-
-> React native layout debugger.
 
 ## Install
 
