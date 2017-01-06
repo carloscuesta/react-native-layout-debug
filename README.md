@@ -1,5 +1,11 @@
 # react-native-layout-debug
 
+<p align="center">
+	<a href="#">
+		<img src="https://cloud.githubusercontent.com/assets/7629661/21726803/7f7004b6-d43e-11e6-9e7d-e735f8825006.png" width="409" alt="react-native-layout-debug">
+	</a>
+</p>
+
 [![Travis](https://img.shields.io/travis/carloscuesta/react-native-layout-debug.svg?style=flat-square)](https://travis-ci.org/carloscuesta/react-native-layout-debug)
 [![npm version](https://img.shields.io/npm/v/react-native-layout-debug.svg?style=flat-square)](https://www.npmjs.com/package/react-native-layout-debug)
 [![npm-downloads](https://img.shields.io/npm/dt/react-native-layout-debug.svg?style=flat-square)](https://www.npmjs.com/package/react-native-layout-debug)
@@ -33,18 +39,10 @@ If you don't like the default colors, you can provide an object of colors to the
 
 ```javascript
 class HelloWorld extends Component {
+	// Using a custom config {style: 'background', colors: colorListObject}
+	// @reactNativeDebug({style: 'background', colors: colorListObject})
 	// Using the default config {style: 'border', borderWidth: 3, colors: defaultColors}.
 	@reactNativeDebug
-	render(debug) {
-		return (
-			<View style={[debug('red')]}>
-				<Text>Hey!</Text>
-			</View>
-		);
-	}
-
-	// Using a custom object of colors and backgrounds {style: 'background', colors: colorListObject}
-	@reactNativeDebug({style: 'background', colors: colorListObject})
 	render(debug) {
 		return (
 			<View style={[debug('red')]}>
@@ -58,8 +56,11 @@ class HelloWorld extends Component {
 ### Usage without decorator
 
 ```javascript
-
+// Leave an empty object to use the default configuration.
 const debug = reactNativeDebug({});
+
+// Using a custom config
+const debug = reactNativeDebug({style: 'background', colors: colorListObject, borderWidth: 4});
 
 class HelloWorld extends Component {
 	render() {
@@ -74,7 +75,7 @@ class HelloWorld extends Component {
 
 ## Customization
 
-The debugger could be customized with these three properties: `style`, `colors` and `borderWidth`.
+The debugger could be customized via an object with these three properties: `style`, `colors` and `borderWidth`.
 
 #### `style`
 
@@ -89,4 +90,4 @@ An **object of colors** that will be used by the debug. Look at [`defaultColors.
 
 #### `borderWidth`
 
-The **borderWidth** unit to use as a border, by default set to `3`.
+The **borderWidth** unit to use as border, by default is set to `3`.
