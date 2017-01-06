@@ -32,7 +32,7 @@
 	      "transform-decorators-legacy"
 	    ]
       }
-    },
+    }
   },
   "repository": {
     "type": "git",
