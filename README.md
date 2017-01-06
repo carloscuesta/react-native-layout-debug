@@ -27,14 +27,27 @@ To debug a layout component, you should call the `debug(color)` method inside th
 
 The **debug(color)** accepts a color to use as a border or background. If not provided will pick a random color from the list. See the [defaultColors](https://github.com/carloscuesta/react-native-layout-debug/blob/master/src/defaultColors.js), these colors should be used by the name.
 
-If you don't like the default colors, you can provide an object of colors to the Debugger, see the [customization section]().
+If you don't like the default colors, you can provide an object of colors to the Debugger, see the [customization section](https://github.com/carloscuesta/react-native-layout-debug#customization).
 
 ### Usage with decorator
 
 ```javascript
 class HelloWorld extends Component {
-	// Empty object to use the default config {style: border, borderWidth: 3, colors: defaultColors}.
-	@reactNativeDebug({})
+	// Using the default config {style: 'border', borderWidth: 3, colors: defaultColors}.
+	@reactNativeDebug
+	render(debug) {
+		return (
+			<View style={[debug('red')]}>
+				<Text>Hey!</Text>
+			</View>
+		);
+	}
+
+	// Using a custom object of colors and backgrounds {style: 'background', colors: colorListObject}
+	@reactNativeDebug({
+		style: 'background',
+		colors: colorListObject
+	})
 	render(debug) {
 		return (
 			<View style={[debug('red')]}>
@@ -62,7 +75,7 @@ class HelloWorld extends Component {
 }
 ```
 
-### Customization
+## Customization
 
 The debugger could be customized with these three properties: `style`, `colors`, `borderWidth`.
 
