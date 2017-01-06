@@ -15,25 +15,22 @@
 
 ```bash
 $ npm i --save react-native-layout-debug
+$ npm i --save-dev babel-plugin-transform-decorators-legacy
 ```
 
 ## Usage
 
-Install and import the module inside your code.
+Install and import the module inside your code. Update your .babelrc config and add `babel-plugin-transform-decorators-legacy` as a plugin.
 
 ```javascript
 import reactNativeLayoutDebug from 'react-native-layout-debug';
 ```
-
-There are two ways to use **react-native-layout-debug** using it with a **decorator** or **directly**.
 
 To debug a layout component, you should call the `debug(color)` method inside the prop `style={}`.
 
 The **debug(color)** accepts a color to use as a border or background. If not provided will pick a random color from the list, normally you should specify a color by the name from the list, Eg: `debug('red')`. See the [defaultColors](https://github.com/carloscuesta/react-native-layout-debug/blob/master/src/defaultColors.js).
 
 If you don't like the default colors, you can provide an object of colors to the Debugger, see the [customization section](https://github.com/carloscuesta/react-native-layout-debug#customization).
-
-### Usage with decorator
 
 ```javascript
 class HelloWorld extends Component {
@@ -45,26 +42,6 @@ class HelloWorld extends Component {
 		return (
 			<View style={[debug('red')]}>
 				<Text>Hey!</Text>
-			</View>
-		);
-	}
-}
-```
-
-### Usage without decorator
-
-```javascript
-// Leave an empty object to use the default configuration.
-const debug = reactNativeDebug({});
-
-// Using a custom config
-const debug = reactNativeDebug({style: 'background', colors: colorListObject, borderWidth: 4});
-
-class HelloWorld extends Component {
-	render() {
-		return (
-			<View style={debug('red')}>
-
 			</View>
 		);
 	}
